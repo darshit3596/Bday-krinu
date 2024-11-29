@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="logic.js"></script>  
+    <title>Dhingli-Birthday</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="wish">
+        <img src="Photos/bday.png" alt="photos" style="padding: 0;" height="200px">
+    </div>
+
+    <div class="container">
+        <div class="content active" id="content1">
+            <img src="Photos/con1.png" alt="" height="355px">
+        </div>
+
+        <div class="content" id="content1">
+            <img src="Photos/c2.jpg" alt="" height="355px" width="100%">
+        </div>
+
+        <div class="content" id="content1">
+            <h3>My memories with You  </h3>
+            
+           
+        </div>
+
+        <div class="content" id="content1">
+            <img src="Photos/c3.jpg" alt="" height="355px" width="100%">
+            <h3>Gpg clg ni memories NBA kahi bar besva nu and taru rovanu  😂 😂</h3>
+        </div>
+
+        <div class="content" id="content1">
+            <h3>Tari sathe kareli pizaa party  😂 😂</h3>
+            <img src="Photos/c4.jpg" alt="" height="355px" width="100%">
+           
+        </div>
+
+        <div class="content" id="content1">
+            <h3> Osia kareli masti 😂</h3>
+            <img src="Photos/c5.jpg" alt="" height="355px" width="100%">
+           
+        </div>
+
+        <div class="content" id="content1">
+            <img src="Photos/c6.jpg" alt="" height="355px" width="70%">
+            <h3> Bija ne jealous karva hotel same padela photos  😂</h3>
+           
+        </div>
+
+        <div class="content" id="content1">
+            <img src="Photos/c7.jpg" alt="" height="355px" width="100%">
+           <h3>Movie jota jota tara karela Nakhara </h3>
+        </div>
+
+        <div class="content" id="content1">
+            <h3>Dp chang karva keh story mukva pela 1-2 kalak aapdu karelu discusion </h3>
+            <img src="Photos/c8.jpg" alt="" height="355px" width="100%">
+        </div>
+
+        <div class="content" id="content1">
+            <img src="Photos/c9.jpg" alt="" height="355px" width="100%">
+            <h3>Tari jode farva javu and aavu bov badhi memoris che  </h3>
+        </div>
+
+        <div class="content" id="content1">
+            <h3>Tari jode farva javu and aavu bov badhi memoris che  </h3>
+            <img src="Photos/c10.jpg" alt="" height="355px" width="100%">
+        </div>
+
+
+        <div class="content" id="content1">
+            <h2>🤗🥰❤️🥰💞🥰💕🥰💘🥰💝🥰😍🥰🤗Thank you so much mari life ma aava mathe 🤗🥰❤️🥰💞🥰💕🥰💘🥰💝🥰😍🥰🤗 </h2>
+           <br><br><br><br>Next kar 
+        </div>
+
+        <div class="content" id="content1">
+            <h1>I Love You Dhingli ❤️🤗🥰</h1>
+            <h6>As a Friend</h6>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+    </div>
+    <div class="buttons">
+        <button id="prevButton" onclick="showPrevious()" disabled>Previous</button>
+        <button id="nextButton" onclick="showNext()">Next</button>
+    </div>
+
+    <script>
+        const contents = document.querySelectorAll('.content');
+        let currentIndex = 0;
+
+        function updateView() {
+            // Hide all content
+            contents.forEach((content, index) => {
+                content.classList.toggle('active', index === currentIndex);
+            });
+
+            // Enable/disable buttons
+            document.getElementById('prevButton').disabled = currentIndex === 0;
+            document.getElementById('nextButton').disabled = currentIndex === contents.length - 1;
+        }
+
+        function showPrevious() {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateView();
+            }
+        }
+
+        function showNext() {
+            if (currentIndex < contents.length - 1) {
+                currentIndex++;
+                updateView();
+            }
+        }
+    </script>
+
+</body>
+</html>
